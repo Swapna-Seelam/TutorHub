@@ -1,0 +1,151 @@
+/* Reset body margins and base styling */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4; /* Light gray background */
+  font-family: 'Arial', sans-serif;
+  color: #000; /* Ensure global text is visible */
+}
+
+/* Page container */
+.profile-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+  min-height: calc(100vh - 60px);
+  padding: 20px;
+  background-color: #f4f4f4;
+  box-sizing: border-box;
+}
+
+/* Form card */
+.profile-card {
+  background: white;
+  padding: 20px 50px; /* Reduced vertical, increased horizontal padding */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 550px;  /* Increased width */
+  max-width: 100%;
+  box-sizing: border-box;
+  text-align: left;
+  min-height: 300px; /* Optional: control minimum height */
+}
+
+/* Heading */
+.profile-card h3 {
+  text-align: center;
+  font-size: 24px;
+  color: #222;
+  margin-bottom: 16px; /* Reduced margin */
+  border-bottom: 2px solid #6e8efb;
+  padding-bottom: 8px; /* Slightly reduced */
+  font-weight: 600;
+}
+
+/* Form structure */
+.profile-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px; /* Reduced gap for tighter form height */
+}
+
+/* Label styling */
+.profile-card label {
+  font-size: 14px;
+  color: #555;
+  font-weight: 600;
+  margin-bottom: 4px; /* Slightly reduced */
+  display: block;
+  text-transform: capitalize;
+}
+
+/* Input & Select styling */
+.profile-card input,
+.profile-card select {
+  padding: 10px; /* Slightly reduced padding */
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #ffffff;
+  color: #000000;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+/* Focus style */
+.profile-card input:focus,
+.profile-card select:focus {
+  border-color: #6e8efb;
+  outline: none;
+}
+
+/* Button style */
+button {
+  background: linear-gradient(90deg, #6e8efb, #a777e3);
+  color: white;
+  border: none;
+  padding: 10px; /* Reduced padding for compact height */
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  width: 100%; /* Full width button */
+}
+
+button:hover {
+  background: linear-gradient(90deg, #5f7de8, #9467d3);
+  transform: translateY(-2px);
+}
+
+/* Success and Error messages */
+.message {
+  padding: 8px; /* Reduced padding */
+  font-size: 14px;
+  border-radius: 6px;
+  margin-bottom: 10px; /* Reduced margin */
+  text-align: center;
+}
+
+.success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+/* Adjusting for smaller screens */
+@media (max-width: 768px) {
+  .profile-card {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .profile-card h3 {
+    font-size: 22px;
+  }
+
+  .profile-card form {
+    gap: 12px;
+  }
+
+  .profile-card input,
+  .profile-card select {
+    font-size: 13px;
+    padding: 8px;
+  }
+
+  button {
+    font-size: 13px;
+    padding: 8px;
+  }
+}
+

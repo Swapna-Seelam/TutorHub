@@ -1,0 +1,2040 @@
+/* General Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+    color: #2d3436;
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+  
+  /* About Container */
+  .about-container {
+    text-align: center;
+    margin-top: 80px; /* Adjusted for fixed navbar */
+    padding: 40px 20px;
+    min-height: calc(100vh - 60px);
+    position: relative;
+    overflow: hidden;
+    background: radial-gradient(circle at center, rgba(108, 92, 231, 0.1), transparent 70%);
+  }
+  
+  /* Header Styling */
+  .about-container h4 {
+    font-size: 2.2rem;
+    color: #1e272e;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    position: relative;
+    font-weight: 600;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .about-container h4::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #0984e3, #74b9ff);
+    border-radius: 2px;
+  }
+  
+  /* Image Styling */
+  .about-image {
+    width: 200px;
+    margin-top: 30px;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.5s ease, box-shadow 0.3s ease;
+    animation: float 4s ease-in-out infinite;
+  }
+  
+  /* Floating Animation for Image */
+  @keyframes float {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-15px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  .about-image:hover {
+    transform: scale(1.1) translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  }
+  
+  /* Background Decorative Element (optional subtle effect) */
+  .about-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at top right, rgba(9, 132, 227, 0.2), transparent 50%);
+    z-index: -1;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .about-container {
+      margin-top: 70px;
+      padding: 30px 15px;
+    }
+  
+    .about-container h4 {
+      font-size: 1.8rem;
+    }
+  
+    .about-image {
+      width: 150px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .about-container {
+      margin-top: 60px;
+      padding: 20px 10px;
+    }
+  
+    .about-container h4 {
+      font-size: 1.5rem;
+    }
+  
+    .about-image {
+      width: 120px;
+      margin-top: 20px;
+    }
+  }
+
+  /* General Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+    color: #2d3436;
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+  
+  /* Contact Container */
+  .contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 60px);
+    padding: 20px;
+    margin-top: 60px; /* Adjusted for fixed navbar */
+    position: relative;
+    background: radial-gradient(circle at bottom left, rgba(255, 99, 71, 0.1), transparent 60%);
+  }
+  
+  /* Form Styling */
+  .contact-form {
+    background: linear-gradient(145deg, #ffffff, #f8f9fa);
+    padding: 35px;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    max-width: 400px;
+    border-left: 5px solid #ff6347; /* Tomato accent for uniqueness */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .contact-form:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Header Styling */
+  .contact-form h3 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #1e272e;
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+  }
+  
+  .contact-form h3 u {
+    text-decoration: none;
+    border-bottom: 3px solid #ff6347;
+    padding-bottom: 2px;
+  }
+  
+  .contact-form h3::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(90deg, #ff6347, #ff8c69);
+    border-radius: 2px;
+  }
+  
+  /* Messages */
+  .contact-form .message {
+    text-align: center;
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  
+  .contact-form .message.success {
+    background-color: #d4edda;
+    color: #155724;
+  }
+  
+  .contact-form .message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+  }
+  
+  /* Form Fields */
+  .contact-form div {
+    margin-bottom: 20px;
+  }
+  
+  .contact-form label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 500;
+    color: #2d3436;
+    font-size: 0.95rem;
+    text-align: left;
+  }
+  
+  .contact-form input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    background-color: #f8f9fa;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .contact-form input:focus {
+    outline: none;
+    border-color: #ff6347;
+    box-shadow: 0 0 8px rgba(255, 99, 71, 0.3);
+  }
+  
+  /* Override browser autofill styles */
+  .contact-form input:-webkit-autofill,
+  .contact-form input:-webkit-autofill:hover,
+  .contact-form input:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0 30px #f8f9fa inset !important;
+    -webkit-text-fill-color: #2d3436 !important;
+  }
+  
+  /* Buttons */
+  .contact-form button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(90deg, #ff6347, #ff8c69);
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+  
+  .contact-form button:hover {
+    background: linear-gradient(90deg, #e65b3d, #ff7f50);
+    transform: scale(1.02);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .contact-container {
+      padding: 15px;
+    }
+  
+    .contact-form {
+      padding: 25px;
+      max-width: 350px;
+    }
+  
+    .contact-form h3 {
+      font-size: 1.7rem;
+    }
+  
+    .contact-form input {
+      padding: 8px;
+      font-size: 0.9rem;
+    }
+  
+    .contact-form button {
+      padding: 10px;
+      font-size: 0.95rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .contact-container {
+      padding: 10px;
+    }
+  
+    .contact-form {
+      padding: 20px;
+      max-width: 300px;
+    }
+  
+    .contact-form h3 {
+      font-size: 1.4rem;
+    }
+  
+    .contact-form label {
+      font-size: 0.9rem;
+    }
+  
+    .contact-form input {
+      padding: 7px;
+      font-size: 0.85rem;
+    }
+  
+    .contact-form button {
+      padding: 8px;
+      font-size: 0.9rem;
+    }
+  }
+
+  /* General Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+    color: #2d3436;
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+  
+  /* Home Container */
+  .home-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px 20px;
+    min-height: calc(100vh - 60px);
+    margin-top: 60px; /* Adjusted for fixed navbar */
+    flex-wrap: wrap;
+    position: relative;
+    background: radial-gradient(circle at top center, rgba(52, 152, 219, 0.1), transparent 70%);
+  }
+  
+  /* Section Styling (Admin, Tutor, Student) */
+  .admin-section,
+  .tutor-section,
+  .student-section {
+    background: linear-gradient(145deg, #ffffff, #f8f9fa);
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    padding: 25px;
+    width: 100%;
+    max-width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Unique Accent Colors for Each Section */
+  .admin-section {
+    border-left: 5px solid #e84393; /* Pink from AdminLogin */
+  }
+  
+  .tutor-section {
+    border-left: 5px solid #6c5ce7; /* Purple from AdminHome */
+  }
+  
+  .student-section {
+    border-left: 5px solid #ff6347; /* Tomato from Contact */
+  }
+  
+  /* Hover Effect for Sections */
+  .admin-section:hover,
+  .tutor-section:hover,
+  .student-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Header Styling */
+  .admin-section h3,
+  .tutor-section h3,
+  .student-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    color: #1e272e;
+  }
+  
+  /* Unique Underline Gradient for Each Section */
+  .admin-section h3::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background: linear-gradient(90deg, #e84393, #fd79a8);
+    border-radius: 2px;
+  }
+  
+  .tutor-section h3::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background: linear-gradient(90deg, #6c5ce7, #a29bfe);
+    border-radius: 2px;
+  }
+  
+  .student-section h3::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background: linear-gradient(90deg, #ff6347, #ff8c69);
+    border-radius: 2px;
+  }
+  
+  /* List Styling */
+  .admin-section ul,
+  .tutor-section ul,
+  .student-section ul {
+    list-style: none;
+  }
+  
+  .admin-section ul li,
+  .tutor-section ul li,
+  .student-section ul li {
+    font-size: 1rem;
+    color: #2d3436;
+    padding: 10px 0;
+    transition: color 0.3s ease;
+  }
+  
+  /* Hover Effect for List Items */
+  .admin-section ul li:hover {
+    color: #e84393;
+  }
+  
+  .tutor-section ul li:hover {
+    color: #6c5ce7;
+  }
+  
+  .student-section ul li:hover {
+    color: #ff6347;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .home-container {
+      padding: 30px 15px;
+      gap: 20px;
+    }
+  
+    .admin-section,
+    .tutor-section,
+    .student-section {
+      max-width: 250px;
+      padding: 20px;
+    }
+  
+    .admin-section h3,
+    .tutor-section h3,
+    .student-section h3 {
+      font-size: 1.3rem;
+    }
+  
+    .admin-section ul li,
+    .tutor-section ul li,
+    .student-section ul li {
+      font-size: 0.9rem;
+      padding: 8px 0;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .home-container {
+      padding: 20px 10px;
+      gap: 15px;
+    }
+  
+    .admin-section,
+    .tutor-section,
+    .student-section {
+      max-width: 100%;
+      padding: 15px;
+    }
+  
+    .admin-section h3,
+    .tutor-section h3,
+    .student-section h3 {
+      font-size: 1.2rem;
+    }
+  
+    .admin-section ul li,
+    .tutor-section ul li,
+    .student-section ul li {
+      font-size: 0.85rem;
+      padding: 6px 0;
+    }
+  }
+
+  /* General Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+    color: #2d3436;
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+  
+  /* Navigation Bar */
+  .navbar {
+    background: linear-gradient(90deg, #1e272e, #34495e);
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: background 0.3s ease;
+  }
+  
+  .navbar:hover {
+    background: linear-gradient(90deg, #1a252c, #2f4155);
+  }
+  
+  /* Logo Styling */
+  .logo {
+    color: #fff;
+    font-size: 1.7rem;
+    font-weight: 700;
+    font-style: italic;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Navigation Links */
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    align-items: center;
+  }
+  
+  .nav-links li {
+    position: relative;
+  }
+  
+  .nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .nav-links li a:hover {
+    color: #00cec9; /* Teal accent from AdminHome */
+    transform: scale(1.05);
+  }
+  
+  /* Dropdown Styling */
+  .dropdown {
+    position: relative;
+  }
+  
+  .dropdown span {
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .dropdown span:hover {
+    color: #00cec9;
+  }
+  
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: linear-gradient(90deg, #2c3e50, #34495e);
+    list-style: none;
+    padding: 10px 0;
+    border-radius: 6px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    min-width: 120px;
+    z-index: 1000;
+  }
+  
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+  
+  .dropdown-menu li {
+    padding: 8px 15px;
+  }
+  
+  .dropdown-menu li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+  }
+  
+  .dropdown-menu li a:hover {
+    color: #e84393; /* Pink accent from AdminLogin */
+  }
+  
+  /* Home Container */
+  .home-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px 20px;
+    min-height: calc(100vh - 60px);
+    margin-top: 60px;
+    flex-wrap: wrap;
+    position: relative;
+    background: radial-gradient(circle at top center, rgba(52, 152, 219, 0.1), transparent 70%);
+  }
+  
+  /* Section Styling (Admin, Tutor, Student) */
+  .admin-section,
+  .tutor-section,
+  .student-section {
+    background: linear-gradient(145deg, #ffffff, #f8f9fa);
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    padding: 25px;
+    width: 100%;
+    max-width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Unique Accent Colors for Each Section */
+  .admin-section {
+    border-left: 5px solid #e84393;
+  }
+  
+  .tutor-section {
+    border-left: 5px solid #6c5ce7;
+  }
+  
+  .student-section {
+    border-left: 5px solid #ff6347;
+  }
+  
+  /* Hover Effect for Sections */
+  .admin-section:hover,
+  .tutor-section:hover,
+  .student-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Header Styling */
+  .admin-section h3,
+  .tutor-section h3,
+  .student-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    color: #1e272e;
+  }
+  
+  /* Unique Underline Gradient for Each Section */
+  .admin-section h3::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background: linear-gradient(90deg, #e84393, #fd79a8);
+    border-radius: 2px;
+  }
+  
+  .tutor-section h3::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background: linear-gradient(90deg, #6c5ce7, #a29bfe);
+    border-radius: 2px;
+  }
+  
+  .student-section h3::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background: linear-gradient(90deg, #ff6347, #ff8c69);
+    border-radius: 2px;
+  }
+  
+  /* List Styling */
+  .admin-section ul,
+  .tutor-section ul,
+  .student-section ul {
+    list-style: none;
+  }
+  
+  .admin-section ul li,
+  .tutor-section ul li,
+  .student-section ul li {
+    font-size: 1rem;
+    color: #2d3436;
+    padding: 10px 0;
+    transition: color 0.3s ease;
+  }
+  
+  /* Hover Effect for List Items */
+  .admin-section ul li:hover {
+    color: #e84393;
+  }
+  
+  .tutor-section ul li:hover {
+    color: #6c5ce7;
+  }
+  
+  .student-section ul li:hover {
+    color: #ff6347;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .navbar {
+      padding: 15px 20px;
+    }
+  
+    .nav-links {
+      gap: 15px;
+    }
+  
+    .logo {
+      font-size: 1.5rem;
+    }
+  
+    .nav-links li a,
+    .dropdown span {
+      font-size: 1rem;
+    }
+  
+    .home-container {
+      padding: 30px 15px;
+      gap: 20px;
+    }
+  
+    .admin-section,
+    .tutor-section,
+    .student-section {
+      max-width: 250px;
+      padding: 20px;
+    }
+  
+    .admin-section h3,
+    .tutor-section h3,
+    .student-section h3 {
+      font-size: 1.3rem;
+    }
+  
+    .admin-section ul li,
+    .tutor-section ul li,
+    .student-section ul li {
+      font-size: 0.9rem;
+      padding: 8px 0;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .navbar {
+      padding: 10px 15px;
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .logo {
+      font-size: 1.3rem;
+    }
+  
+    .nav-links {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+  
+    .nav-links li a,
+    .dropdown span {
+      font-size: 0.95rem;
+    }
+  
+    .dropdown-menu {
+      position: static;
+      box-shadow: none;
+      background: none;
+      padding: 0;
+    }
+  
+    .dropdown-menu li {
+      padding: 5px 0;
+    }
+  
+    .home-container {
+      padding: 20px 10px;
+      gap: 15px;
+    }
+  
+    .admin-section,
+    .tutor-section,
+    .student-section {
+      max-width: 100%;
+      padding: 15px;
+    }
+  
+    .admin-section h3,
+    .tutor-section h3,
+    .student-section h3 {
+      font-size: 1.2rem;
+    }
+  
+    .admin-section ul li,
+    .tutor-section ul li,
+    .student-section ul li {
+      font-size: 0.85rem;
+      padding: 6px 0;
+    }
+  }
+
+  /* General Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+    color: #2d3436;
+    line-height: 1.6;
+    min-height: 100vh;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Subtle Background Animation */
+  body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(255, 99, 71, 0.1), transparent 70%);
+    animation: pulse 10s ease-in-out infinite;
+    z-index: -1;
+  }
+  
+  @keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+  }
+  
+  /* Navigation Bar */
+  .navbar {
+    background: linear-gradient(90deg, #1e272e, #2c3e50);
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: background 0.3s ease;
+    height: 60px;
+  }
+  
+  .navbar:hover {
+    background: linear-gradient(90deg, #1a252c, #283a46);
+  }
+  
+  .logo {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+  }
+  
+  .nav-links li {
+    position: relative;
+  }
+  
+  .nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .nav-links li a:hover {
+    color: #ff6347;
+    transform: scale(1.05);
+  }
+  
+  /* Student Login Container */
+  .student-login-container {
+    padding-top: 120px; /* Space between navbar and form */
+    min-height: calc(100vh - 120px); /* Ensure full height minus padding */
+    width: 100vw; /* Take full viewport width */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    flex-direction: column; /* Stack children vertically */
+    flex-grow: 1; /* Ensure it takes up remaining space */
+  }
+  
+  /* Admin Login Container */
+  .admin-login-container {
+    padding-top: 120px; /* Space between navbar and form */
+    min-height: calc(100vh - 120px); /* Ensure full height minus padding */
+    width: 100vw; /* Take full viewport width */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    flex-direction: column; /* Stack children vertically */
+    flex-grow: 1; /* Ensure it takes up remaining space */
+  }
+  
+  /* Student Registration Container (for consistency) */
+  .student-registration-container {
+    padding-top: 120px; /* Space between navbar and form */
+    min-height: calc(100vh - 120px); /* Ensure full height minus padding */
+    width: 100vw; /* Take full viewport width */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    flex-direction: column; /* Stack children vertically */
+    flex-grow: 1; /* Ensure it takes up remaining space */
+  }
+  
+  /* Student Login Form */
+  .student-login-container .student-login-form {
+    background: linear-gradient(145deg, #ffffff, #f1f6f9);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 450px;
+    border-left: 5px solid #ff6347;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .student-login-container .student-login-form:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+    filter: brightness(1.05) drop-shadow(0 0 12px rgba(255, 99, 71, 0.3));
+  }
+  
+  .student-login-container .student-login-form::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 99, 71, 0.15), transparent 70%);
+    opacity: 0.5;
+    pointer-events: none;
+    animation: rotateGlow 15s linear infinite;
+  }
+  
+  /* Student Registration Form */
+  .student-registration-container .student-registration-form {
+    background: linear-gradient(145deg, #ffffff, #f1f6f9);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 450px;
+    border-left: 5px solid #ff6347;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .student-registration-container .student-registration-form:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+    filter: brightness(1.05) drop-shadow(0 0 12px rgba(255, 99, 71, 0.3));
+  }
+  
+  .student-registration-container .student-registration-form::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 99, 71, 0.15), transparent 70%);
+    opacity: 0.5;
+    pointer-events: none;
+    animation: rotateGlow 15s linear infinite;
+  }
+  
+  /* Admin Login Form */
+  .admin-login-container .admin-login-form {
+    background: linear-gradient(145deg, #ffffff, #f1f6f9);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 450px; /* Set to match student login form */
+    border-left: 5px solid #ff6347;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .admin-login-container .admin-login-form:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+    filter: brightness(1.05) drop-shadow(0 0 12px rgba(255, 99, 71, 0.3));
+  }
+  
+  .admin-login-container .admin-login-form::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 99, 71, 0.15), transparent 70%);
+    opacity: 0.5;
+    pointer-events: none;
+    animation: rotateGlow 15s linear infinite;
+  }
+  
+  @keyframes rotateGlow {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+  }
+  
+  /* Form Heading */
+  .student-login-container .student-login-form h3,
+  .student-registration-container .student-registration-form h3,
+  .admin-login-container .admin-login-form h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #040709;
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    text-decoration: none;
+  }
+  
+  .student-login-container .student-login-form h3::after,
+  .student-registration-container .student-registration-form h3::after,
+  .admin-login-container .admin-login-form h3::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 3px;
+    background: linear-gradient(90deg, #ff6347, #ff8c69);
+    border-radius: 2px;
+  }
+  
+  /* Form Fields */
+  .student-login-container .student-login-form div,
+  .student-registration-container .student-registration-form div,
+  .admin-login-container .admin-login-form div {
+    margin-bottom: 15px;
+  }
+  
+  .student-login-container .student-login-form label,
+  .student-registration-container .student-registration-form label,
+  .admin-login-container .admin-login-form label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 500;
+    color: #2d3436;
+    font-size: 0.95rem;
+  }
+  
+  .student-login-container .student-login-form input,
+  .student-registration-container .student-registration-form input,
+  .student-registration-container .student-registration-form select,
+  .admin-login-container .admin-login-form input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #dfe6e9;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    background-color: #f7fafc;
+    color: #000000; /* Ensure entered text is black */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .student-login-container .student-login-form input:focus,
+  .student-registration-container .student-registration-form input:focus,
+  .student-registration-container .student-registration-form select:focus,
+  .admin-login-container .admin-login-form input:focus {
+    outline: none;
+    border-color: #ff6347;
+    box-shadow: 0 0 8px rgba(255, 99, 71, 0.3);
+    color: #000000; /* Ensure text remains black on focus */
+  }
+  
+  .student-registration-container .student-registration-form input[type="date"],
+  .admin-login-container .admin-login-form input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #dfe6e9;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    background-color: #f7fafc;
+    color: #000000; /* Ensure entered text is black */
+  }
+  
+  .student-registration-container .student-registration-form select,
+  .admin-login-container .admin-login-form select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="black" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    padding-right: 30px;
+    color: #000000; /* Ensure selected text is black */
+  }
+  
+  /* Form Buttons */
+  .student-login-container .student-login-form button,
+  .student-registration-container .student-registration-form button,
+  .admin-login-container .admin-login-form button {
+    width: 100%;
+    padding: 10px;
+    background: linear-gradient(90deg, #ff6347, #ff8c69);
+    border: none;
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  }
+  
+  .student-login-container .student-login-form button:hover,
+  .student-registration-container .student-registration-form button:hover,
+  .admin-login-container .admin-login-form button:hover {
+    background: linear-gradient(90deg, #e65b3d, #ff7f50);
+    transform: scale(1.03);
+    box-shadow: 0 4px 12px rgba(255, 99, 71, 0.4);
+  }
+  
+  /* Messages */
+  .student-login-container .student-login-form .message,
+  .student-registration-container .student-registration-form .message,
+  .admin-login-container .admin-login-form .message {
+    text-align: center;
+    padding: 8px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-weight: 600;
+  }
+  
+  .student-login-container .student-login-form .message.success,
+  .student-registration-container .student-registration-form .message.success,
+  .admin-login-container .admin-login-form .message.success {
+    background-color: #d4edda;
+    color: #155724;
+  }
+  
+  .student-login-container .student-login-form .message.error,
+  .student-registration-container .student-registration-form .message.error,
+  .admin-login-container .admin-login-form .message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .navbar {
+        padding: 15px 20px;
+    }
+  
+    .nav-links {
+        gap: 15px;
+    }
+  
+    .student-login-container,
+    .admin-login-container,
+    .student-registration-container {
+        padding-top: 110px;
+    }
+  
+    .student-login-container .student-login-form,
+    .student-registration-container .student-registration-form,
+    .admin-login-container .admin-login-form {
+        padding: 20px;
+        max-width: 400px; /* Consistent width for all forms */
+    }
+  
+    .student-login-container .student-login-form h3,
+    .student-registration-container .student-registration-form h3,
+    .admin-login-container .admin-login-form h3 {
+        font-size: 1.6rem;
+    }
+  
+    .student-login-container .student-login-form input,
+    .student-registration-container .student-registration-form input,
+    .student-registration-container .student-registration-form select,
+    .admin-login-container .admin-login-form input {
+        padding: 8px;
+        font-size: 0.9rem;
+        color: #000000; /* Ensure entered text is black */
+    }
+  
+    .student-login-container .student-login-form button,
+    .student-registration-container .student-registration-form button,
+    .admin-login-container .admin-login-form button {
+        padding: 8px;
+        font-size: 0.95rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .navbar {
+        padding: 10px 15px;
+        flex-direction: column;
+        gap: 10px;
+    }
+  
+    .logo {
+        font-size: 1.3rem;
+    }
+  
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+  
+    .student-login-container,
+    .admin-login-container,
+    .student-registration-container {
+        padding-top: 100px;
+        padding: 15px;
+    }
+  
+    .student-login-container .student-login-form,
+    .student-registration-container .student-registration-form,
+    .admin-login-container .admin-login-form {
+        padding: 15px;
+        max-width: 300px; /* Consistent width for all forms */
+    }
+  
+    .student-login-container .student-login-form h3,
+    .student-registration-container .student-registration-form h3,
+    .admin-login-container .admin-login-form h3 {
+        font-size: 1.4rem;
+    }
+  
+    .student-login-container .student-login-form label,
+    .student-registration-container .student-registration-form label,
+    .admin-login-container .admin-login-form label {
+        font-size: 0.85rem;
+    }
+  
+    .student-login-container .student-login-form input,
+    .student-registration-container .student-registration-form input,
+    .student-registration-container .student-registration-form select,
+    .admin-login-container .admin-login-form input {
+        padding: 6px;
+        font-size: 0.85rem;
+        color: #000000; /* Ensure entered text is black */
+    }
+  
+    .student-login-container .student-login-form button,
+    .student-registration-container .student-registration-form button,
+    .admin-login-container .admin-login-form button {
+        padding: 6px;
+        font-size: 0.9rem;
+    }
+  }
+
+  /* General Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+    color: #2d3436;
+    line-height: 1.6;
+    min-height: 100vh;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* About Container */
+  .about-container {
+    text-align: center;
+    margin-top: 20px;
+    padding: 20px;
+    max-width: 600px;
+    width: 100%;
+  }
+  
+  /* Heading */
+  .about-container h4 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #040709;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+  }
+  
+  .about-container h4::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 3px;
+    background: linear-gradient(90deg, #ff6347, #ff8c69);
+    border-radius: 2px;
+  }
+  
+  /* Image */
+  .about-container img {
+    width: 200px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .about-container img:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .about-container {
+      padding: 15px;
+      margin-top: 15px;
+    }
+  
+    .about-container h4 {
+      font-size: 1.6rem;
+    }
+  
+    .about-container img {
+      width: 150px;
+      margin-top: 15px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .about-container {
+      padding: 10px;
+      margin-top: 10px;
+    }
+  
+    .about-container h4 {
+      font-size: 1.4rem;
+    }
+  
+    .about-container img {
+      width: 120px;
+      margin-top: 10px;
+    }
+  }
+
+  /* General Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+    color: #2d3436;
+    line-height: 1.6;
+    min-height: 100vh;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Subtle Background Animation */
+  body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(255, 99, 71, 0.1), transparent 70%);
+    animation: pulse 10s ease-in-out infinite;
+    z-index: -1;
+  }
+  
+  @keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+  }
+  
+  /* Contact Container */
+  .contact-container {
+    padding-top: 120px; /* Space for navbar */
+    min-height: calc(100vh - 120px);
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+  
+  /* Contact Form */
+  .contact-container form {
+    background: linear-gradient(145deg, #ffffff, #f1f6f9);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 450px;
+    border-left: 5px solid #ff6347;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .contact-container form:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+    filter: brightness(1.05) drop-shadow(0 0 12px rgba(255, 99, 71, 0.3));
+  }
+  
+  .contact-container form::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 99, 71, 0.15), transparent 70%);
+    opacity: 0.5;
+    pointer-events: none;
+    animation: rotateGlow 15s linear infinite;
+  }
+  
+  @keyframes rotateGlow {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+  }
+  
+  /* Form Heading */
+  .contact-container h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #040709;
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    text-decoration: none;
+  }
+  
+  .contact-container h3::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 3px;
+    background: linear-gradient(90deg, #ff6347, #ff8c69);
+    border-radius: 2px;
+  }
+  
+  /* Messages */
+  .contact-container p {
+    text-align: center;
+    padding: 8px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-weight: 600;
+  }
+  
+  .contact-container p.success {
+    background-color: #d4edda;
+    color: #155724;
+  }
+  
+  .contact-container p.error {
+    background-color: #f8d7da;
+    color: #721c24;
+  }
+  
+  /* Form Fields */
+  .contact-container form div {
+    margin-bottom: 15px;
+  }
+  
+  .contact-container form label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 500;
+    color: #2d3436;
+    font-size: 0.95rem;
+  }
+  
+  .contact-container form input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #dfe6e9;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    background-color: #f7fafc;
+    color: #000000; /* Ensure entered text is black */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .contact-container form input:focus {
+    outline: none;
+    border-color: #ff6347;
+    box-shadow: 0 0 8px rgba(255, 99, 71, 0.3);
+    color: #000000; /* Ensure text remains black on focus */
+  }
+  
+  /* Form Button */
+  .contact-container form button {
+    width: 100%;
+    padding: 10px;
+    background: linear-gradient(90deg, #ff6347, #ff8c69);
+    border: none;
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  }
+  
+  .contact-container form button:hover {
+    background: linear-gradient(90deg, #e65b3d, #ff7f50);
+    transform: scale(1.03);
+    box-shadow: 0 4px 12px rgba(255, 99, 71, 0.4);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .contact-container {
+      padding-top: 110px;
+    }
+  
+    .contact-container form {
+      padding: 20px;
+      max-width: 400px;
+    }
+  
+    .contact-container h3 {
+      font-size: 1.6rem;
+    }
+  
+    .contact-container form input {
+      padding: 8px;
+      font-size: 0.9rem;
+    }
+  
+    .contact-container form button {
+      padding: 8px;
+      font-size: 0.95rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .contact-container {
+      padding-top: 100px;
+      padding: 15px;
+    }
+  
+    .contact-container form {
+      padding: 15px;
+      max-width: 300px;
+    }
+  
+    .contact-container h3 {
+      font-size: 1.4rem;
+    }
+  
+    .contact-container form label {
+      font-size: 0.85rem;
+    }
+  
+    .contact-container form input {
+      padding: 6px;
+      font-size: 0.85rem;
+    }
+  
+    .contact-container form button {
+      padding: 6px;
+      font-size: 0.9rem;
+    }
+  }
+
+  /* General Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+  color: #2d3436;
+  line-height: 1.6;
+  min-height: 100vh;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Subtle Background Animation */
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, rgba(255, 99, 71, 0.1), transparent 70%);
+  animation: pulse 10s ease-in-out infinite;
+  z-index: -1;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+}
+
+/* Navigation Bar */
+.navbar {
+  background: linear-gradient(90deg, #1e272e, #2c3e50);
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  transition: background 0.3s ease;
+  height: 60px;
+}
+
+.navbar:hover {
+  background: linear-gradient(90deg, #1a252c, #283a46);
+}
+
+.logo {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.nav-links li a:hover {
+  color: #ff6347;
+  transform: scale(1.05);
+}
+
+/* Contact Container */
+.contact-container {
+  padding-top: 120px; /* Space for navbar */
+  min-height: calc(100vh - 120px);
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+/* Contact Form */
+.contact-form {
+  background: linear-gradient(145deg, #ffffff, #f1f6f9);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 450px;
+  border-left: 5px solid #ff6347;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-form:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+  filter: brightness(1.05) drop-shadow(0 0 12px rgba(255, 99, 71, 0.3));
+}
+
+.contact-form::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 99, 71, 0.15), transparent 70%);
+  opacity: 0.5;
+  pointer-events: none;
+  animation: rotateGlow 15s linear infinite;
+}
+
+@keyframes rotateGlow {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Form Heading */
+.contact-form h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #040709;
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  text-decoration: none;
+}
+
+.contact-form h3::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 3px;
+  background: linear-gradient(90deg, #ff6347, #ff8c69);
+  border-radius: 2px;
+}
+
+/* Messages */
+.contact-form .message {
+  text-align: center;
+  padding: 8px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.contact-form .message.success {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.contact-form .message.error {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+/* Form Fields */
+.contact-form div {
+  margin-bottom: 15px;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+  color: #2d3436;
+  font-size: 0.95rem;
+}
+
+.contact-form input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #dfe6e9;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  background-color: #f7fafc;
+  color: #000000; /* Ensure entered text is black */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form input:focus {
+  outline: none;
+  border-color: #ff6347;
+  box-shadow: 0 0 8px rgba(255, 99, 71, 0.3);
+  color: #000000; /* Ensure text remains black on focus */
+}
+
+/* Form Button */
+.contact-form button {
+  width: 100%;
+  padding: 10px;
+  background: linear-gradient(90deg, #ff6347, #ff8c69);
+  border: none;
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.contact-form button:hover {
+  background: linear-gradient(90deg, #e65b3d, #ff7f50);
+  transform: scale(1.03);
+  box-shadow: 0 4px 12px rgba(255, 99, 71, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-container {
+    padding-top: 110px;
+  }
+
+  .contact-form {
+    padding: 20px;
+    max-width: 400px;
+  }
+
+  .contact-form h3 {
+    font-size: 1.6rem;
+  }
+
+  .contact-form input {
+    padding: 8px;
+    font-size: 0.9rem;
+  }
+
+  .contact-form button {
+    padding: 8px;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-container {
+    padding-top: 100px;
+    padding: 15px;
+  }
+
+  .contact-form {
+    padding: 15px;
+    max-width: 300px;
+  }
+
+  .contact-form h3 {
+    font-size: 1.4rem;
+  }
+
+  .contact-form label {
+    font-size: 0.85rem;
+  }
+
+  .contact-form input {
+    padding: 6px;
+    font-size: 0.85rem;
+  }
+
+  .contact-form button {
+    padding: 6px;
+    font-size: 0.9rem;
+  }
+}

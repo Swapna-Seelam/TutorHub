@@ -1,0 +1,113 @@
+/* General Body Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Add space between Navbar and About section */
+.about-wrapper {
+  margin-top: 50px; /* Adjust this value depending on your navbar's height */
+  padding: 20px;
+}
+
+/* About Container Styling */
+.about-container {
+  background-color: #f9f9f9; /* Light background for contrast */
+  border-radius: 8px;
+  padding: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* About Title */
+.about-title {
+  font-size: 2.5rem;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* About Description */
+.about-description {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* About Subheading */
+.about-subheading {
+  font-size: 1.8rem;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+/* Benefits List */
+.benefits-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.benefits-list li {
+  font-size: 1.1rem;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+.benefits-list li strong {
+  color: #333;
+}
+
+/* Call to Action Section */
+.about-call-to-action {
+  background-color: #e0f7fa;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+  margin-top: 30px;
+}
+
+.about-call-to-action h4 {
+  font-size: 1.5rem;
+  color: #00796b;
+  margin-bottom: 10px;
+}
+
+.about-call-to-action p {
+  font-size: 1.1rem;
+  color: #00796b;
+}
+
+/* Responsive Design: Adjusting the layout for smaller screens */
+@media (max-width: 768px) {
+  .about-container {
+    padding: 20px;
+  }
+
+  .about-title {
+    font-size: 2rem;
+  }
+
+  .about-description {
+    font-size: 1rem;
+  }
+
+  .about-subheading {
+    font-size: 1.5rem;
+  }
+
+  .benefits-list li {
+    font-size: 1rem;
+  }
+
+  .about-call-to-action h4 {
+    font-size: 1.3rem;
+  }
+
+  .about-call-to-action p {
+    font-size: 1rem;
+  }
+}

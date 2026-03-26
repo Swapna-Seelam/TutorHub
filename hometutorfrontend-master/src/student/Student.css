@@ -1,0 +1,1943 @@
+General Reset and Base Styles
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+  color: #2d3436;
+  line-height: 1.6;
+  min-height: 100vh;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Subtle Background Animation */
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, rgba(255, 99, 71, 0.1), transparent 70%);
+  animation: pulse 10s ease-in-out infinite;
+  z-index: -1;
+}
+
+@keyframes pulse {
+  0% {
+      transform: scale(1);
+      opacity: 0.5;
+  }
+  50% {
+      transform: scale(1.2);
+      opacity: 0.8;
+  }
+  100% {
+      transform: scale(1);
+      opacity: 0.5;
+  }
+}
+
+/* Navigation Bar */
+.navbar {
+  background: linear-gradient(90deg, #1e272e, #2c3e50);
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  transition: background 0.3s ease;
+  height: 60px;
+}
+
+.navbar:hover {
+  background: linear-gradient(90deg, #1a252c, #283a46);
+}
+
+.logo {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.nav-links li a:hover {
+  color: #ff6347;
+  transform: scale(1.05);
+}
+
+/* Main Content Wrapper */
+.main-content {
+  padding-top: 120px;
+  min-height: calc(100vh - 120px);
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+/* Student Registration Container */
+.student-registration-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin: 0;
+  width: 100%;
+  flex-grow: 1;
+}
+
+/* Form Switcher */
+.form-switcher {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.form-switcher button {
+  padding: 10px 20px;
+  background: linear-gradient(90deg, #1e272e, #2c3e50);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.form-switcher button:hover {
+  background: linear-gradient(90deg, #1a252c, #283a46);
+}
+
+/* Student Registration Form */
+.student-registration-container .student-registration-form {
+  background: linear-gradient(145deg, #ffffff, #f1f6f9);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 450px;
+  border-left: 5px solid #ff6347;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.student-registration-container .student-registration-form:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+  filter: brightness(1.05) drop-shadow(0 0 12px rgba(255, 99, 71, 0.3));
+}
+
+.student-registration-container .student-registration-form::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 99, 71, 0.15), transparent 70%);
+  opacity: 0.5;
+  pointer-events: none;
+  animation: rotateGlow 15s linear infinite;
+}
+
+/* Student Login Form */
+.student-registration-container .student-login-form {
+  background: linear-gradient(145deg, #ffffff, #f1f6f9);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 450px;
+  border-left: 5px solid #ff6347;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.student-registration-container .student-login-form:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+  filter: brightness(1.05) drop-shadow(0 0 12px rgba(255, 99, 71, 0.3));
+}
+
+.student-registration-container .student-login-form::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 99, 71, 0.15), transparent 70%);
+  opacity: 0.5;
+  pointer-events: none;
+  animation: rotateGlow 15s linear infinite;
+}
+
+/* Admin Login Form */
+.student-registration-container .admin-login-form {
+  background: linear-gradient(145deg, #ffffff, #f1f6f9);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 450px;
+  border-left: 5px solid #ff6347;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.student-registration-container .admin-login-form:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+  filter: brightness(1.05) drop-shadow(0 0 12px rgba(255, 99, 71, 0.3));
+}
+
+.student-registration-container .admin-login-form::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 99, 71, 0.15), transparent 70%);
+  opacity: 0.5;
+  pointer-events: none;
+  animation: rotateGlow 15s linear infinite;
+}
+
+@keyframes rotateGlow {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
+/* Form Heading */
+.student-registration-container .student-registration-form h3,
+.student-registration-container .student-login-form h3,
+.student-registration-container .admin-login-form h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #040709;
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  text-decoration: none;
+}
+
+.student-registration-container .student-registration-form h3::after,
+.student-registration-container .student-login-form h3::after,
+.student-registration-container .admin-login-form h3::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 3px;
+  background: linear-gradient(90deg, #ff6347, #ff8c69);
+  border-radius: 2px;
+}
+
+/* Form Fields */
+.student-registration-container .student-registration-form div,
+.student-registration-container .student-login-form div,
+.student-registration-container .admin-login-form div {
+  margin-bottom: 15px;
+}
+
+.student-registration-container .student-registration-form label,
+.student-registration-container .student-login-form label,
+.student-registration-container .admin-login-form label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+  color: #2d3436;
+  font-size: 0.95rem;
+}
+
+.student-registration-container .student-registration-form input,
+.student-registration-container .student-registration-form select,
+.student-registration-container .student-login-form input,
+.student-registration-container .admin-login-form input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #dfe6e9;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  background-color: #f7fafc;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.student-registration-container .student-registration-form input:focus,
+.student-registration-container .student-registration-form select:focus,
+.student-registration-container .student-login-form input:focus,
+.student-registration-container .admin-login-form input:focus {
+  outline: none;
+  border-color: #ff6347;
+  box-shadow: 0 0 8px rgba(255, 99, 71, 0.3);
+}
+
+.student-registration-container .student-registration-form input[type="date"],
+.student-registration-container .student-login-form input[type="date"],
+.student-registration-container .admin-login-form input[type="date"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #dfe6e9;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  background-color: #f7fafc;
+}
+
+.student-registration-container .student-registration-form select,
+.student-registration-container .student-login-form select,
+.student-registration-container .admin-login-form select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg fill="black" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  padding-right: 30px;
+}
+
+/* Form Buttons */
+.student-registration-container .student-registration-form button,
+.student-registration-container .student-login-form button,
+.student-registration-container .admin-login-form button {
+  width: 100%;
+  padding: 10px;
+  background: linear-gradient(90deg, #ff6347, #ff8c69);
+  border: none;
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.student-registration-container .student-registration-form button:hover,
+.student-registration-container .student-login-form button:hover,
+.student-registration-container .admin-login-form button:hover {
+  background: linear-gradient(90deg, #e65b3d, #ff7f50);
+  transform: scale(1.03);
+  box-shadow: 0 4px 12px rgba(255, 99, 71, 0.4);
+}
+
+/* Messages */
+.student-registration-container .student-registration-form .message,
+.student-registration-container .student-login-form .message,
+.student-registration-container .admin-login-form .message {
+  text-align: center;
+  padding: 8px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.student-registration-container .student-registration-form .message.success,
+.student-registration-container .student-login-form .message.success,
+.student-registration-container .admin-login-form .message.success {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.student-registration-container .student-registration-form .message.error,
+.student-registration-container .student-login-form .message.error,
+.student-registration-container .admin-login-form .message.error {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+      padding: 15px 20px;
+  }
+
+  .nav-links {
+      gap: 15px;
+  }
+
+  .main-content {
+      padding-top: 110px;
+  }
+
+  .student-registration-container .student-registration-form,
+  .student-registration-container .student-login-form,
+  .student-registration-container .admin-login-form {
+      padding: 20px;
+      max-width: 400px;
+  }
+
+  .student-registration-container .student-registration-form h3,
+  .student-registration-container .student-login-form h3,
+  .student-registration-container .admin-login-form h3 {
+      font-size: 1.6rem;
+  }
+
+  .student-registration-container .student-registration-form input,
+  .student-registration-container .student-registration-form select,
+  .student-registration-container .student-login-form input,
+  .student-registration-container .admin-login-form input {
+      padding: 8px;
+      font-size: 0.9rem;
+  }
+
+  .student-registration-container .student-registration-form button,
+  .student-registration-container .student-login-form button,
+  .student-registration-container .admin-login-form button {
+      padding: 8px;
+      font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+      padding: 10px 15px;
+      flex-direction: column;
+      gap: 10px;
+  }
+
+  .logo {
+      font-size: 1.3rem;
+  }
+
+  .nav-links {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+  }
+
+  .main-content {
+      padding-top: 100px;
+  }
+
+  .student-registration-container {
+      padding: 15px;
+  }
+
+  .student-registration-container .student-registration-form,
+  .student-registration-container .student-login-form,
+  .student-registration-container .admin-login-form {
+      padding: 15px;
+      max-width: 300px;
+  }
+
+  .student-registration-container .student-registration-form h3,
+  .student-registration-container .student-login-form h3,
+  .student-registration-container .admin-login-form h3 {
+      font-size: 1.4rem;
+  }
+
+  .student-registration-container .student-registration-form label,
+  .student-registration-container .student-login-form label,
+  .student-registration-container .admin-login-form label {
+      font-size: 0.85rem;
+  }
+
+  .student-registration-container .student-registration-form input,
+  .student-registration-container .student-registration-form select,
+  .student-registration-container .student-login-form input,
+  .student-registration-container .admin-login-form input {
+      padding: 6px;
+      font-size: 0.85rem;
+  }
+
+  .student-registration-container .student-registration-form button,
+  .student-registration-container .student-login-form button,
+  .student-registration-container .admin-login-form button {
+      padding: 6px;
+      font-size: 0.9rem;
+  }
+}
+
+/* General Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+  color: #2d3436;
+  line-height: 1.6;
+  min-height: 100vh;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Subtle Background Animation */
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, rgba(255, 99, 71, 0.1), transparent 70%);
+  animation: pulse 10s ease-in-out infinite;
+  z-index: -1;
+}
+
+@keyframes pulse {
+  0% {
+      transform: scale(1);
+      opacity: 0.5;
+  }
+  50% {
+      transform: scale(1.2);
+      opacity: 0.8;
+  }
+  100% {
+      transform: scale(1);
+      opacity: 0.5;
+  }
+}
+
+/* Navigation Bar */
+.navbar {
+  background: linear-gradient(90deg, #1e272e, #2c3e50);
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  transition: background 0.3s ease;
+  height: 60px;
+}
+
+.navbar:hover {
+  background: linear-gradient(90deg, #1a252c, #283a46);
+}
+
+.logo {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.nav-links li a:hover {
+  color: #ff6347;
+  transform: scale(1.05);
+}
+
+/* Main Content Wrapper */
+.main-content {
+  padding-top: 120px;
+  min-height: calc(100vh - 120px);
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+/* Student Login Container */
+.student-login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin: 0;
+  width: 100%;
+  flex-grow: 1;
+}
+
+/* Student Registration Form */
+.student-login-container .student-login-form {
+  background: linear-gradient(145deg, #ffffff, #f1f6f9);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 450px;
+  border-left: 5px solid #ff6347;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.student-login-container .student-login-form:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+  filter: brightness(1.05) drop-shadow(0 0 12px rgba(255, 99, 71, 0.3));
+}
+
+.student-login-container .student-login-form::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 99, 71, 0.15), transparent 70%);
+  opacity: 0.5;
+  pointer-events: none;
+  animation: rotateGlow 15s linear infinite;
+}
+
+/* Student Registration Form (for consistency with other components) */
+.student-registration-container .student-registration-form {
+  background: linear-gradient(145deg, #ffffff, #f1f6f9);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 450px;
+  border-left: 5px solid #ff6347;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.student-registration-container .student-registration-form:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+  filter: brightness(1.05) drop-shadow(0 0 12px rgba(255, 99, 71, 0.3));
+}
+
+.student-registration-container .student-registration-form::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 99, 71, 0.15), transparent 70%);
+  opacity: 0.5;
+  pointer-events: none;
+  animation: rotateGlow 15s linear infinite;
+}
+
+/* Admin Login Form */
+.student-registration-container .admin-login-form {
+  background: linear-gradient(145deg, #ffffff, #f1f6f9);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 450px;
+  border-left: 5px solid #ff6347;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.student-registration-container .admin-login-form:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+  filter: brightness(1.05) drop-shadow(0 0 12px rgba(255, 99, 71, 0.3));
+}
+
+.student-registration-container .admin-login-form::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 99, 71, 0.15), transparent 70%);
+  opacity: 0.5;
+  pointer-events: none;
+  animation: rotateGlow 15s linear infinite;
+}
+
+@keyframes rotateGlow {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
+/* Form Heading */
+.student-login-container .student-login-form h3,
+.student-registration-container .student-registration-form h3,
+.student-registration-container .admin-login-form h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #040709;
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  text-decoration: none;
+}
+
+.student-login-container .student-login-form h3::after,
+.student-registration-container .student-registration-form h3::after,
+.student-registration-container .admin-login-form h3::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 3px;
+  background: linear-gradient(90deg, #ff6347, #ff8c69);
+  border-radius: 2px;
+}
+
+/* Form Fields */
+.student-login-container .student-login-form div,
+.student-registration-container .student-registration-form div,
+.student-registration-container .admin-login-form div {
+  margin-bottom: 15px;
+}
+
+.student-login-container .student-login-form label,
+.student-registration-container .student-registration-form label,
+.student-registration-container .admin-login-form label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+  color: #2d3436;
+  font-size: 0.95rem;
+}
+
+.student-login-container .student-login-form input,
+.student-registration-container .student-registration-form input,
+.student-registration-container .student-registration-form select,
+.student-registration-container .admin-login-form input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #dfe6e9;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  background-color: #f7fafc;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.student-login-container .student-login-form input:focus,
+.student-registration-container .student-registration-form input:focus,
+.student-registration-container .student-registration-form select:focus,
+.student-registration-container .admin-login-form input:focus {
+  outline: none;
+  border-color: #ff6347;
+  box-shadow: 0 0 8px rgba(255, 99, 71, 0.3);
+}
+
+.student-registration-container .student-registration-form input[type="date"],
+.student-registration-container .admin-login-form input[type="date"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #dfe6e9;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  background-color: #f7fafc;
+}
+
+.student-registration-container .student-registration-form select,
+.student-registration-container .admin-login-form select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg fill="black" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  padding-right: 30px;
+}
+
+/* Form Buttons */
+.student-login-container .student-login-form button,
+.student-registration-container .student-registration-form button,
+.student-registration-container .admin-login-form button {
+  width: 100%;
+  padding: 10px;
+  background: linear-gradient(90deg, #ff6347, #ff8c69);
+  border: none;
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.student-login-container .student-login-form button:hover,
+.student-registration-container .student-registration-form button:hover,
+.student-registration-container .admin-login-form button:hover {
+  background: linear-gradient(90deg, #e65b3d, #ff7f50);
+  transform: scale(1.03);
+  box-shadow: 0 4px 12px rgba(255, 99, 71, 0.4);
+}
+
+/* Messages */
+.student-login-container .student-login-form .message,
+.student-registration-container .student-registration-form .message,
+.student-registration-container .admin-login-form .message {
+  text-align: center;
+  padding: 8px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.student-login-container .student-login-form .message.success,
+.student-registration-container .student-registration-form .message.success,
+.student-registration-container .admin-login-form .message.success {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.student-login-container .student-login-form .message.error,
+.student-registration-container .student-registration-form .message.error,
+.student-registration-container .admin-login-form .message.error {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+      padding: 15px 20px;
+  }
+
+  .nav-links {
+      gap: 15px;
+  }
+
+  .main-content {
+      padding-top: 110px;
+  }
+
+  .student-login-container .student-login-form,
+  .student-registration-container .student-registration-form,
+  .student-registration-container .admin-login-form {
+      padding: 20px;
+      max-width: 400px;
+  }
+
+  .student-login-container .student-login-form h3,
+  .student-registration-container .student-registration-form h3,
+  .student-registration-container .admin-login-form h3 {
+      font-size: 1.6rem;
+  }
+
+  .student-login-container .student-login-form input,
+  .student-registration-container .student-registration-form input,
+  .student-registration-container .student-registration-form select,
+  .student-registration-container .admin-login-form input {
+      padding: 8px;
+      font-size: 0.9rem;
+  }
+
+  .student-login-container .student-login-form button,
+  .student-registration-container .student-registration-form button,
+  .student-registration-container .admin-login-form button {
+      padding: 8px;
+      font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+      padding: 10px 15px;
+      flex-direction: column;
+      gap: 10px;
+  }
+
+  .logo {
+      font-size: 1.3rem;
+  }
+
+  .nav-links {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+  }
+
+  .main-content {
+      padding-top: 100px;
+  }
+
+  .student-login-container {
+      padding: 15px;
+  }
+
+  .student-login-container .student-login-form,
+  .student-registration-container .student-registration-form,
+  .student-registration-container .admin-login-form {
+      padding: 15px;
+      max-width: 300px;
+  }
+
+  .student-login-container .student-login-form h3,
+  .student-registration-container .student-registration-form h3,
+  .student-registration-container .admin-login-form h3 {
+      font-size: 1.4rem;
+  }
+
+  .student-login-container .student-login-form label,
+  .student-registration-container .student-registration-form label,
+  .student-registration-container .admin-login-form label {
+      font-size: 0.85rem;
+  }
+
+  .student-login-container .student-login-form input,
+  .student-registration-container .student-registration-form input,
+  .student-registration-container .student-registration-form select,
+  .student-registration-container .admin-login-form input {
+      padding: 6px;
+      font-size: 0.85rem;
+  }
+
+  .student-login-container .student-login-form button,
+  .student-registration-container .student-registration-form button,
+  .student-registration-container .admin-login-form button {
+      padding: 6px;
+      font-size: 0.9rem;
+  }
+}
+
+/* General Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+  color: #2d3436;
+  line-height: 1.6;
+  min-height: 100vh;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Subtle Background Animation */
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, rgba(255, 99, 71, 0.1), transparent 70%);
+  animation: pulse 10s ease-in-out infinite;
+  z-index: -1;
+}
+
+@keyframes pulse {
+  0% {
+      transform: scale(1);
+      opacity: 0.5;
+  }
+  50% {
+      transform: scale(1.2);
+      opacity: 0.8;
+  }
+  100% {
+      transform: scale(1);
+      opacity: 0.5;
+  }
+}
+
+/* Navigation Bar */
+.navbar {
+  background: linear-gradient(90deg, #1e272e, #2c3e50);
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  transition: background 0.3s ease;
+  height: 60px;
+}
+
+.navbar:hover {
+  background: linear-gradient(90deg, #1a252c, #283a46);
+}
+
+.logo {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.nav-links li a:hover {
+  color: #ff6347;
+  transform: scale(1.05);
+}
+
+/* Student Login Container */
+.student-login-container {
+  padding-top: 120px; /* Space between navbar and form */
+  min-height: calc(100vh - 120px); /* Ensure full height minus padding */
+  width: 100vw; /* Take full viewport width */
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  flex-direction: column; /* Stack children vertically */
+  flex-grow: 1; /* Ensure it takes up remaining space */
+}
+
+/* Student Login Form */
+.student-login-container .student-login-form {
+  background: linear-gradient(145deg, #ffffff, #f1f6f9);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 450px;
+  border-left: 5px solid #ff6347;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.student-login-container .student-login-form:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+  filter: brightness(1.05) drop-shadow(0 0 12px rgba(255, 99, 71, 0.3));
+}
+
+.student-login-container .student-login-form::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 99, 71, 0.15), transparent 70%);
+  opacity: 0.5;
+  pointer-events: none;
+  animation: rotateGlow 15s linear infinite;
+}
+
+/* Student Registration Form (for consistency with other components) */
+.student-registration-container .student-registration-form {
+  background: linear-gradient(145deg, #ffffff, #f1f6f9);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 450px;
+  border-left: 5px solid #ff6347;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.student-registration-container .student-registration-form:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+  filter: brightness(1.05) drop-shadow(0 0 12px rgba(255, 99, 71, 0.3));
+}
+
+.student-registration-container .student-registration-form::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 99, 71, 0.15), transparent 70%);
+  opacity: 0.5;
+  pointer-events: none;
+  animation: rotateGlow 15s linear infinite;
+}
+
+/* Admin Login Form */
+.student-registration-container .admin-login-form {
+  background: linear-gradient(145deg, #ffffff, #f1f6f9);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 450px;
+  border-left: 5px solid #ff6347;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.student-registration-container .admin-login-form:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+  filter: brightness(1.05) drop-shadow(0 0 12px rgba(255, 99, 71, 0.3));
+}
+
+.student-registration-container .admin-login-form::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 99, 71, 0.15), transparent 70%);
+  opacity: 0.5;
+  pointer-events: none;
+  animation: rotateGlow 15s linear infinite;
+}
+
+@keyframes rotateGlow {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
+/* Form Heading */
+.student-login-container .student-login-form h3,
+.student-registration-container .student-registration-form h3,
+.student-registration-container .admin-login-form h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #040709;
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  text-decoration: none;
+}
+
+.student-login-container .student-login-form h3::after,
+.student-registration-container .student-registration-form h3::after,
+.student-registration-container .admin-login-form h3::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 3px;
+  background: linear-gradient(90deg, #ff6347, #ff8c69);
+  border-radius: 2px;
+}
+
+/* Form Fields */
+.student-login-container .student-login-form div,
+.student-registration-container .student-registration-form div,
+.student-registration-container .admin-login-form div {
+  margin-bottom: 15px;
+}
+
+.student-login-container .student-login-form label,
+.student-registration-container .student-registration-form label,
+.student-registration-container .admin-login-form label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+  color: #2d3436;
+  font-size: 0.95rem;
+}
+
+.student-login-container .student-login-form input,
+.student-registration-container .student-registration-form input,
+.student-registration-container .student-registration-form select,
+.student-registration-container .admin-login-form input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #dfe6e9;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  background-color: #f7fafc;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.student-login-container .student-login-form input:focus,
+.student-registration-container .student-registration-form input:focus,
+.student-registration-container .student-registration-form select:focus,
+.student-registration-container .admin-login-form input:focus {
+  outline: none;
+  border-color: #ff6347;
+  box-shadow: 0 0 8px rgba(255, 99, 71, 0.3);
+}
+
+.student-registration-container .student-registration-form input[type="date"],
+.student-registration-container .admin-login-form input[type="date"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #dfe6e9;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  background-color: #f7fafc;
+}
+
+.student-registration-container .student-registration-form select,
+.student-registration-container .admin-login-form select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg fill="black" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  padding-right: 30px;
+}
+
+/* Form Buttons */
+.student-login-container .student-login-form button,
+.student-registration-container .student-registration-form button,
+.student-registration-container .admin-login-form button {
+  width: 100%;
+  padding: 10px;
+  background: linear-gradient(90deg, #ff6347, #ff8c69);
+  border: none;
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.student-login-container .student-login-form button:hover,
+.student-registration-container .student-registration-form button:hover,
+.student-registration-container .admin-login-form button:hover {
+  background: linear-gradient(90deg, #e65b3d, #ff7f50);
+  transform: scale(1.03);
+  box-shadow: 0 4px 12px rgba(255, 99, 71, 0.4);
+}
+
+/* Messages */
+.student-login-container .student-login-form .message,
+.student-registration-container .student-registration-form .message,
+.student-registration-container .admin-login-form .message {
+  text-align: center;
+  padding: 8px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.student-login-container .student-login-form .message.success,
+.student-registration-container .student-registration-form .message.success,
+.student-registration-container .admin-login-form .message.success {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.student-login-container .student-login-form .message.error,
+.student-registration-container .student-registration-form .message.error,
+.student-registration-container .admin-login-form .message.error {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+      padding: 15px 20px;
+  }
+
+  .nav-links {
+      gap: 15px;
+  }
+
+  .student-login-container {
+      padding-top: 110px;
+  }
+
+  .student-login-container .student-login-form,
+  .student-registration-container .student-registration-form,
+  .student-registration-container .admin-login-form {
+      padding: 20px;
+      max-width: 400px;
+  }
+
+  .student-login-container .student-login-form h3,
+  .student-registration-container .student-registration-form h3,
+  .student-registration-container .admin-login-form h3 {
+      font-size: 1.6rem;
+  }
+
+  .student-login-container .student-login-form input,
+  .student-registration-container .student-registration-form input,
+  .student-registration-container .student-registration-form select,
+  .student-registration-container .admin-login-form input {
+      padding: 8px;
+      font-size: 0.9rem;
+  }
+
+  .student-login-container .student-login-form button,
+  .student-registration-container .student-registration-form button,
+  .student-registration-container .admin-login-form button {
+      padding: 8px;
+      font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+      padding: 10px 15px;
+      flex-direction: column;
+      gap: 10px;
+  }
+
+  .logo {
+      font-size: 1.3rem;
+  }
+
+  .nav-links {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+  }
+
+  .student-login-container {
+      padding-top: 100px;
+  }
+
+  .student-login-container {
+      padding: 15px;
+  }
+
+  .student-login-container .student-login-form,
+  .student-registration-container .student-registration-form,
+  .student-registration-container .admin-login-form {
+      padding: 15px;
+      max-width: 300px;
+  }
+
+  .student-login-container .student-login-form h3,
+  .student-registration-container .student-registration-form h3,
+  .student-registration-container .admin-login-form h3 {
+      font-size: 1.4rem;
+  }
+
+  .student-login-container .student-login-form label,
+  .student-registration-container .student-registration-form label,
+  .student-registration-container .admin-login-form label {
+      font-size: 0.85rem;
+  }
+
+  .student-login-container .student-login-form input,
+  .student-registration-container .student-registration-form input,
+  .student-registration-container .student-registration-form select,
+  .student-registration-container .admin-login-form input {
+      padding: 6px;
+      font-size: 0.85rem;
+  }
+
+  .student-login-container .student-login-form button,
+  .student-registration-container .student-registration-form button,
+  .student-registration-container .admin-login-form button {
+      padding: 6px;
+      font-size: 0.9rem;
+  }
+}
+
+/* General Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+  color: #2d3436;
+  line-height: 1.6;
+  min-height: 100vh;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, rgba(255, 99, 71, 0.1), transparent 70%);
+  animation: pulse 10s ease-in-out infinite;
+  z-index: -1;
+}
+
+@keyframes pulse {
+  0% {
+      transform: scale(1);
+      opacity: 0.5;
+  }
+  50% {
+      transform: scale(1.2);
+      opacity: 0.8;
+  }
+  100% {
+      transform: scale(1);
+      opacity: 0.5;
+  }
+}
+
+.navbar {
+  background: linear-gradient(90deg, #1e272e, #2c3e50);
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  transition: background 0.3s ease;
+  height: 60px;
+}
+
+.navbar:hover {
+  background: linear-gradient(90deg, #1a252c, #283a46);
+}
+
+.logo {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.nav-links li a:hover {
+  color: #ff6347;
+  transform: scale(1.05);
+}
+
+
+.student-login-container {
+  padding-top: 120px; /* Space between navbar and form */
+  min-height: calc(100vh - 120px); /* Ensure full height minus padding */
+  width: 100vw; /* Take full viewport width */
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  flex-direction: column; /* Stack children vertically */
+  flex-grow: 1; /* Ensure it takes up remaining space */
+}
+
+/* Admin Login Container */
+.admin-login-container {
+  padding-top: 120px; /* Space between navbar and form */
+  min-height: calc(100vh - 120px); /* Ensure full height minus padding */
+  width: 100vw; /* Take full viewport width */
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  flex-direction: column; /* Stack children vertically */
+  flex-grow: 1; /* Ensure it takes up remaining space */
+}
+
+/* Student Registration Container (for consistency) */
+.student-registration-container {
+  padding-top: 120px; /* Space between navbar and form */
+  min-height: calc(100vh - 120px); /* Ensure full height minus padding */
+  width: 100vw; /* Take full viewport width */
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  flex-direction: column; /* Stack children vertically */
+  flex-grow: 1; /* Ensure it takes up remaining space */
+}
+
+/* Student Login Form */
+.student-login-container .student-login-form {
+  background: linear-gradient(145deg, #ffffff, #f1f6f9);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 450px;
+  border-left: 5px solid #ff6347;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.student-login-container .student-login-form:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+  filter: brightness(1.05) drop-shadow(0 0 12px rgba(255, 99, 71, 0.3));
+}
+
+.student-login-container .student-login-form::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 99, 71, 0.15), transparent 70%);
+  opacity: 0.5;
+  pointer-events: none;
+  animation: rotateGlow 15s linear infinite;
+}
+
+/* Student Registration Form */
+.student-registration-container .student-registration-form {
+  background: linear-gradient(145deg, #ffffff, #f1f6f9);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 450px;
+  border-left: 5px solid #ff6347;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.student-registration-container .student-registration-form:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+  filter: brightness(1.05) drop-shadow(0 0 12px rgba(255, 99, 71, 0.3));
+}
+
+.student-registration-container .student-registration-form::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 99, 71, 0.15), transparent 70%);
+  opacity: 0.5;
+  pointer-events: none;
+  animation: rotateGlow 15s linear infinite;
+}
+
+/* Admin Login Form */
+.admin-login-container .admin-login-form {
+  background: linear-gradient(145deg, #ffffff, #f1f6f9);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 450px; /* Set to match student login form */
+  border-left: 5px solid #ff6347;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.admin-login-container .admin-login-form:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+  filter: brightness(1.05) drop-shadow(0 0 12px rgba(255, 99, 71, 0.3));
+}
+
+.admin-login-container .admin-login-form::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 99, 71, 0.15), transparent 70%);
+  opacity: 0.5;
+  pointer-events: none;
+  animation: rotateGlow 15s linear infinite;
+}
+
+@keyframes rotateGlow {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
+/* Form Heading */
+.student-login-container .student-login-form h3,
+.student-registration-container .student-registration-form h3,
+.admin-login-container .admin-login-form h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #040709;
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  text-decoration: none;
+}
+
+.student-login-container .student-login-form h3::after,
+.student-registration-container .student-registration-form h3::after,
+.admin-login-container .admin-login-form h3::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 3px;
+  background: linear-gradient(90deg, #ff6347, #ff8c69);
+  border-radius: 2px;
+}
+
+/* Form Fields */
+.student-login-container .student-login-form div,
+.student-registration-container .student-registration-form div,
+.admin-login-container .admin-login-form div {
+  margin-bottom: 15px;
+}
+
+.student-login-container .student-login-form label,
+.student-registration-container .student-registration-form label,
+.admin-login-container .admin-login-form label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+  color: #2d3436;
+  font-size: 0.95rem;
+}
+
+.student-login-container .student-login-form input,
+.student-registration-container .student-registration-form input,
+.student-registration-container .student-registration-form select,
+.admin-login-container .admin-login-form input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #dfe6e9;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  background-color: #f7fafc;
+  color: #000000; /* Ensure entered text is black */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.student-login-container .student-login-form input:focus,
+.student-registration-container .student-registration-form input:focus,
+.student-registration-container .student-registration-form select:focus,
+.admin-login-container .admin-login-form input:focus {
+  outline: none;
+  border-color: #ff6347;
+  box-shadow: 0 0 8px rgba(255, 99, 71, 0.3);
+  color: #000000; /* Ensure text remains black on focus */
+}
+
+.student-registration-container .student-registration-form input[type="date"],
+.admin-login-container .admin-login-form input[type="date"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #dfe6e9;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  background-color: #f7fafc;
+  color: #000000; /* Ensure entered text is black */
+}
+
+.student-registration-container .student-registration-form select,
+.admin-login-container .admin-login-form select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg fill="black" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  padding-right: 30px;
+  color: #000000; /* Ensure selected text is black */
+}
+
+/* Form Buttons */
+.student-login-container .student-login-form button,
+.student-registration-container .student-registration-form button,
+.admin-login-container .admin-login-form button {
+  width: 100%;
+  padding: 10px;
+  background: linear-gradient(90deg, #ff6347, #ff8c69);
+  border: none;
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.student-login-container .student-login-form button:hover,
+.student-registration-container .student-registration-form button:hover,
+.admin-login-container .admin-login-form button:hover {
+  background: linear-gradient(90deg, #e65b3d, #ff7f50);
+  transform: scale(1.03);
+  box-shadow: 0 4px 12px rgba(255, 99, 71, 0.4);
+}
+
+/* Messages */
+.student-login-container .student-login-form .message,
+.student-registration-container .student-registration-form .message,
+.admin-login-container .admin-login-form .message {
+  text-align: center;
+  padding: 8px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.student-login-container .student-login-form .message.success,
+.student-registration-container .student-registration-form .message.success,
+.admin-login-container .admin-login-form .message.success {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.student-login-container .student-login-form .message.error,
+.student-registration-container .student-registration-form .message.error,
+.admin-login-container .admin-login-form .message.error {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+      padding: 15px 20px;
+  }
+
+  .nav-links {
+      gap: 15px;
+  }
+
+  .student-login-container,
+  .admin-login-container,
+  .student-registration-container {
+      padding-top: 110px;
+  }
+
+  .student-login-container .student-login-form,
+  .student-registration-container .student-registration-form,
+  .admin-login-container .admin-login-form {
+      padding: 20px;
+      max-width: 400px; /* Consistent width for all forms */
+  }
+
+  .student-login-container .student-login-form h3,
+  .student-registration-container .student-registration-form h3,
+  .admin-login-container .admin-login-form h3 {
+      font-size: 1.6rem;
+  }
+
+  .student-login-container .student-login-form input,
+  .student-registration-container .student-registration-form input,
+  .student-registration-container .student-registration-form select,
+  .admin-login-container .admin-login-form input {
+      padding: 8px;
+      font-size: 0.9rem;
+      color: #000000; /* Ensure entered text is black */
+  }
+
+  .student-login-container .student-login-form button,
+  .student-registration-container .student-registration-form button,
+  .admin-login-container .admin-login-form button {
+      padding: 8px;
+      font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+      padding: 10px 15px;
+      flex-direction: column;
+      gap: 10px;
+  }
+
+  .logo {
+      font-size: 1.3rem;
+  }
+
+  .nav-links {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+  }
+
+  .student-login-container,
+  .admin-login-container,
+  .student-registration-container {
+      padding-top: 100px;
+      padding: 15px;
+  }
+
+  .student-login-container .student-login-form,
+  .student-registration-container .student-registration-form,
+  .admin-login-container .admin-login-form {
+      padding: 15px;
+      max-width: 300px; /* Consistent width for all forms */
+  }
+
+  .student-login-container .student-login-form h3,
+  .student-registration-container .student-registration-form h3,
+  .admin-login-container .admin-login-form h3 {
+      font-size: 1.4rem;
+  }
+
+  .student-login-container .student-login-form label,
+  .student-registration-container .student-registration-form label,
+  .admin-login-container .admin-login-form label {
+      font-size: 0.85rem;
+  }
+
+  .student-login-container .student-login-form input,
+  .student-registration-container .student-registration-form input,
+  .student-registration-container .student-registration-form select,
+  .admin-login-container .admin-login-form input {
+      padding: 6px;
+      font-size: 0.85rem;
+      color: #000000; /* Ensure entered text is black */
+  }
+
+  .student-login-container .student-login-form button,
+  .student-registration-container .student-registration-form button,
+  .admin-login-container .admin-login-form button {
+      padding: 6px;
+      font-size: 0.9rem;
+  }
+}
+

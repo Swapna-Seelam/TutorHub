@@ -1,0 +1,64 @@
+/* Global background and base styling */
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #74ebd5, #acb6e5);
+  font-family: 'Arial', sans-serif;
+}
+
+/* Profile page layout */
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 80px;
+  padding: 20px;
+}
+
+/* Heading styling */
+.profile-container h2 {
+  font-size: 24px;
+  color: #2e3b55;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* Profile card */
+.profile-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  padding: 24px 28px;
+  width: 100%;
+  max-width: 400px;
+  box-sizing: border-box;
+}
+
+/* Each info line */
+.profile-card p {
+  font-size: 14px;
+  color: #444;
+  margin: 10px 0;
+}
+
+/* Strong labels */
+.profile-card strong {
+  color: #222;
+  font-weight: 600;
+}
+
+/* Responsive */
+@media screen and (max-width: 480px) {
+  .profile-card {
+    padding: 20px;
+    width: 90%;
+  }
+
+  .profile-container h2 {
+    font-size: 20px;
+  }
+
+  .profile-card p {
+    font-size: 13px;
+  }
+}

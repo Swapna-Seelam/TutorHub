@@ -1,0 +1,100 @@
+/* General container */
+.event-container {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: auto;
+  background-color: #f4f7fb;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.event-heading {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #000;
+}
+
+/* Table styling */
+.event-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.event-table th,
+.event-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+  font-size: 14px;
+  color: #000;
+}
+
+.event-table th {
+  background-color: #f0f2f5;
+  color: #000;
+  font-weight: 600;
+}
+
+.event-table input[type="text"] {
+  width: 100%;
+  padding: 6px 8px;
+  font-size: 13px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #fafafa;
+  transition: border-color 0.3s ease;
+  color: #000;
+}
+
+.event-table input[type="text"]:focus {
+  border-color: #3b82f6;
+  outline: none;
+  background-color: #fff;
+}
+
+/* Book button */
+.book-button {
+  background-color: #3b82f6;
+  color: #fff;
+  padding: 6px 14px;
+  border: none;
+  border-radius: 4px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.book-button:hover {
+  background-color: #2563eb;
+}
+
+/* No match message */
+.event-table tbody td[colspan="9"] {
+  text-align: center;
+  padding: 20px;
+  color: #000;
+  font-style: italic;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .event-container {
+    padding: 20px 10px;
+  }
+
+  .event-table th,
+  .event-table td {
+    padding: 8px 10px;
+    font-size: 12px;
+  }
+
+  .event-heading {
+    font-size: 20px;
+  }
+}

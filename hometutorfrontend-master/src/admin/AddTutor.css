@@ -1,0 +1,171 @@
+/* Reset default body margins */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Main container for Add Tutor */
+.add-tutor-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 100px; /* Space for fixed navbar */
+    min-height: calc(100vh - 60px);
+    background: linear-gradient(135deg, #ffffff, #0c292e);
+    padding: 0;
+    width: 100vw;
+    box-sizing: border-box;
+}
+
+/* Add Tutor Form Container */
+.add-tutor-form-container {
+    background: white;
+    padding: 16px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Header for Add Tutor Form */
+.add-tutor-form-container h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+    border-bottom: 1.5px solid #6e8efb;
+    padding-bottom: 5px;
+}
+
+/* Input Field Styles */
+.add-tutor-form-container label {
+    color: #666;
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.add-tutor-form-container input,
+.add-tutor-form-container select {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 14px;
+    background-color: #fafafa;
+    transition: border-color 0.3s;
+}
+
+/* Focus effect for input fields */
+.add-tutor-form-container input:focus,
+.add-tutor-form-container select:focus {
+    border-color: #6e8efb;
+    outline: none;
+}
+
+/* Gender selection */
+.add-tutor-form-container select {
+    font-size: 14px;
+}
+
+/* Button Styles */
+button {
+    background: linear-gradient(90deg, #033634, #093c47);
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 12px;
+    width: 100%;
+    font-weight: 600;
+    text-transform: uppercase;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, background 0.3s;
+}
+
+/* Hover effect for button */
+button:hover {
+    background: linear-gradient(90deg, #5f7de8, #9467d3);
+    transform: translateY(-1px);
+}
+
+/* Success and Error Messages */
+.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Small message text for feedback */
+.add-tutor-form-container .message {
+    font-size: 12px;
+    text-align: center;
+    color: #333;
+}
+
+/* Styling for the switch link */
+.switch-link {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 12px;
+}
+
+.switch-link span {
+    font-weight: 600;
+    cursor: pointer;
+    color: #6e8efb;
+}
+
+.switch-link span:hover {
+    text-decoration: underline;
+}
+
+
+/* Input Field Styles */
+.add-tutor-form-container label {
+    color: #666;
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.add-tutor-form-container input,
+.add-tutor-form-container select {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 14px;
+    background-color: #fafafa;
+    color: black; /* Set text color to black */
+    transition: border-color 0.3s;
+}
+
+/* Focus effect for input fields */
+.add-tutor-form-container input:focus,
+.add-tutor-form-container select:focus {
+    border-color: #6e8efb;
+    outline: none;
+}
