@@ -54,7 +54,7 @@ Home-Tutor-Finder/
 
 ⚙️ Installation & Setup
 1️⃣ Clone the Repository
-git clone https://https://github.com/Swapna-Seelam.git
+git clone https://github.com/Swapna-Seelam.git
 cd home-tutor-finder
 2️⃣ Backend Setup
 cd backend
